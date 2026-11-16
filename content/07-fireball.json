@@ -1,0 +1,59 @@
+{
+  "phase": "fireball",
+  "summary": "A blast wave drives the fireball outward; Taylor's scaling links its radius to the energy.",
+  "paragraphs": [
+    {
+      "u": 0.0,
+      "text": "From here the picture is a side-on slice through the desert, and the view keeps widening. A blast wave pushes the hot air outward, so the fireball grows. Its bright outer edge is the shock front: air squeezed so hard that it glows."
+    },
+    {
+      "u": 0.26,
+      "text": "The physicist G. I. Taylor worked out how such a blast grows. Radius depends on time to the power two-fifths, with the energy and the density of the air setting the scale: {{shock_law}}. At 25 ms it gives {{shock_r_25ms}}. He read the bright outer edge in published photographs as the shock front and estimated the yield from them."
+    },
+    {
+      "u": 0.4,
+      "text": "At {{breakaway_time}} the front, {{breakaway_radius}} from the centre, grows too cool to glow and runs ahead of the fireball. Afterwards only a faint ring, where the air bends light, races across the desert, with a skirt of dust whipped up behind it."
+    },
+    {
+      "u": 0.78,
+      "text": "The fireball itself keeps swelling more slowly: {{fireball_max_radius}}. Near the ground the wave reflects off the desert and merges with the first wave into a stronger front, called a Mach stem. Here it is drawn only as an illustration."
+    }
+  ],
+  "keys": [
+    { "fact": "shock_law", "u": 0.0 },
+    { "fact": "shock_r_25ms", "u": 0.3 },
+    { "fact": "photo_times", "u": 0.4 },
+    { "fact": "breakaway_time", "u": 0.4 },
+    { "fact": "fireball_max_radius", "u": 0.85 }
+  ],
+  "events": [
+    {
+      "id": "fireball-breakaway",
+      "u": 0.356,
+      "short": "Shock breakaway",
+      "detail": "At {{breakaway_time}} the shock front outruns the glowing fireball and begins to fade.",
+      "major": true
+    },
+    {
+      "id": "fireball-front-gone",
+      "u": 0.539,
+      "short": "Luminous front gone",
+      "detail": "Once the shock front has cooled it no longer glows; only a faint ring remains.",
+      "major": false
+    },
+    {
+      "id": "fireball-max",
+      "u": 0.909,
+      "short": "Fireball at full size",
+      "detail": "The fireball reaches {{fireball_max_radius}}.",
+      "major": false
+    }
+  ],
+  "callouts": [
+    { "id": "taylor", "u0": 0.28, "u1": 0.62, "text": "Taylor read the bright outer edge in published photographs as the shock front, and from its growth estimated the yield." },
+    { "id": "breakaway", "u0": 0.36, "u1": 0.54, "text": "The front outruns the fireball and cools below incandescence." },
+    { "id": "ring", "u0": 0.56, "u1": 0.78, "text": "A faint ring where the air bends light races ahead, with dust behind it." },
+    { "id": "mach", "u0": 0.8, "u1": 0.96, "text": "Near the ground the reflected wave merges with the first. Illustrative, not modelled." },
+    { "id": "max", "u0": 0.9, "u1": 1.0, "text": "The fireball is at its largest and cooling." }
+  ]
+}

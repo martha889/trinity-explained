@@ -1,0 +1,97 @@
+<style>
+/*__FONTS__*/
+/*__CSS__*/
+</style>
+
+<div class="app" id="app">
+  <header class="top">
+    <div class="brand">
+      <h1>Trinity, explained</h1>
+      <span>Jornada del Muerto, New Mexico, 16 July 1945</span>
+    </div>
+    <div class="clock" aria-live="off">
+      <span class="label">Time since the detonators fired</span>
+      <span class="tclock" id="clock">T &minus; 10.00 s</span>
+      <span class="wall" id="wall">05:29:35 MWT</span>
+    </div>
+    <div class="now">
+      <span class="label" id="phase-step">Chapter 1 of 9</span>
+      <span class="phase" id="phase">Jornada del Muerto, 05:29</span>
+      <span class="sub" id="phase-sub"></span>
+    </div>
+    <div class="mbar" aria-hidden="true"><i id="mbar"></i></div>
+  </header>
+
+  <main class="stage">
+    <section class="panel traj" aria-label="Animation">
+      <div class="panel-head"><h2 id="scene-title">Animation</h2><span class="sub" id="scene-frame"></span></div>
+      <div class="canvas-wrap" id="canvas-wrap">
+        <canvas id="scope" role="img" aria-label="Animated scientific illustration of the Trinity test"></canvas>
+      </div>
+      <div class="event-strip" id="toast" aria-live="polite"></div>
+    </section>
+
+    <div class="right">
+      <section class="panel explainer" aria-label="Explainer">
+        <div class="panel-head"><h2 id="ex-title">Explainer</h2><span class="sub" id="ex-num"></span></div>
+        <div class="ex-body" id="ex-body">
+          <div class="ex-scroll" id="ex-scroll" tabindex="0" aria-label="Explanation, scrollable"><div id="ex-paras"></div></div>
+          <div class="ex-foot">
+            <div class="keys" id="ex-keys"></div>
+            <p class="legend"><span class="chip" data-tag="M">M</span> measured or documented
+              <span class="chip" data-tag="C">C</span> calculated
+              <span class="chip" data-tag="I">I</span> illustrative</p>
+          </div>
+        </div>
+      </section>
+      <section class="panel instruments" aria-label="Instruments">
+        <div class="panel-head"><h2>Instruments</h2><span class="sub">log scales</span></div>
+        <canvas id="inst" role="img" aria-label="Time microscope, scale ladder and energy released"></canvas>
+      </section>
+    </div>
+  </main>
+</div>
+
+<div class="transport" role="region" aria-label="Playback controls">
+  <div class="controls">
+    <button class="btn" id="prev" aria-label="Previous event" title="Previous event (Left arrow)"><svg viewBox="0 0 16 16"><path d="M3 2h2v12H3zM14 2v12L6 8z"/></svg></button>
+    <button class="btn primary" id="play" aria-label="Play" title="Play or pause (Space)"><svg viewBox="0 0 16 16" id="play-icon"><path class="i-play" d="M4 2l10 6-10 6z"/><path class="i-pause" d="M3 2h4v12H3zM9 2h4v12H9z"/></svg><span id="play-text">Play</span></button>
+    <button class="btn" id="next" aria-label="Next event" title="Next event (Right arrow)"><svg viewBox="0 0 16 16"><path d="M11 2h2v12h-2zM2 2v12l8-6z"/></svg></button>
+    <div class="speed" role="group" aria-label="Playback speed">
+      <button id="speed-0-5" data-s="0.5" aria-pressed="false" aria-label="Half speed">0.5&times;</button>
+      <button id="speed-1" data-s="1" aria-pressed="true" aria-label="Normal speed">1&times;</button>
+      <button id="speed-2" data-s="2" aria-pressed="false" aria-label="Double speed">2&times;</button>
+      <button id="speed-4" data-s="4" aria-pressed="false" aria-label="Four times speed">4&times;</button>
+    </div>
+    <select class="jump" id="jump" aria-label="Jump to chapter or event"></select>
+    <button class="btn icon" id="theatre" aria-label="Theatre mode" aria-pressed="false" title="Theatre mode (F)"><svg viewBox="0 0 16 16"><path d="M2 2h5v2H4v3H2zM9 2h5v5h-2V4H9zM2 9h2v3h3v2H2zM12 9h2v5H9v-2h3z"/></svg></button>
+    <button class="btn icon" id="help" aria-label="Keyboard shortcuts" aria-expanded="false" aria-controls="shortcuts" title="Keyboard shortcuts (?)">?</button>
+    <span class="ptime" id="ptime">0:00 / 0:00</span>
+  </div>
+  <div class="scrub">
+    <div class="bands" id="bands"></div>
+    <div class="ticks" id="ticks"></div>
+    <div class="played" id="played"></div>
+    <div class="progress" id="progress"></div>
+    <div class="tip" id="scrub-tip" aria-hidden="true"><b></b><span></span></div>
+    <input type="range" id="scrub" min="0" max="1000" step="0.01" value="0" aria-label="Timeline">
+    <div class="focusring"></div>
+  </div>
+</div>
+
+<div class="shortcuts" id="shortcuts" role="dialog" aria-label="Keyboard shortcuts">
+  <h3>Keyboard</h3>
+  <dl>
+    <dt><kbd>Space</kbd></dt><dd>Play / pause</dd>
+    <dt><kbd>&larr;</kbd> <kbd>&rarr;</kbd></dt><dd>Previous / next event</dd>
+    <dt><kbd>1</kbd>&ndash;<kbd>4</kbd></dt><dd>Speed 0.5&times; 1&times; 2&times; 4&times;</dd>
+    <dt><kbd>F</kbd></dt><dd>Theatre mode</dd>
+    <dt><kbd>Esc</kbd></dt><dd>Exit theatre / close</dd>
+    <dt><kbd>?</kbd></dt><dd>This help</dd>
+  </dl>
+</div>
+
+<script id="trinity-data" type="application/json">__DATA__</script>
+<script>
+/*__JS__*/
+</script>

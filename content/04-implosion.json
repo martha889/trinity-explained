@@ -1,0 +1,47 @@
+{
+  "phase": "implosion",
+  "summary": "The converging shock squeezes the plutonium until a neutron is more likely to hit an atom than escape.",
+  "paragraphs": [
+    {
+      "u": 0.0,
+      "text": "At {{implosion_time}} the single inward wave reaches the aluminium pusher. It sweeps through the pusher and the uranium tamper, then into the plutonium core. The bright ring on screen marks the front of the wave."
+    },
+    {
+      "u": 0.2,
+      "text": "No atoms are added. The same plutonium is pressed into less space, so a neutron wandering through the core is far more likely to strike a nucleus before it can escape. The core ends at {{compression}}."
+    },
+    {
+      "u": 0.42,
+      "text": "The dial shows k, the number of new fissions each fission leads to. Below 1, a stray neutron's descendants die out. Above 1, they multiply. As the squeeze tightens, k climbs through 1. These curves are illustrative, not a calculation."
+    },
+    {
+      "u": 0.7,
+      "text": "The uranium tamper has two jobs. It reflects neutrons that would escape back into the core, and its sheer inertia keeps the core from blowing apart for a few extra moments while the reaction runs."
+    }
+  ],
+  "keys": [
+    { "fact": "implosion_time", "u": 0.0 },
+    { "fact": "compression", "u": 0.2 },
+    { "fact": "core_mass", "u": 0.45 }
+  ],
+  "events": [
+    {
+      "id": "implosion-critical",
+      "u": 0.29,
+      "short": "k passes 1",
+      "detail": "The multiplication factor rises through 1: a stray neutron's descendants now multiply instead of dying out.",
+      "major": true
+    },
+    {
+      "id": "implosion-peak",
+      "u": 0.97,
+      "short": "Peak compression",
+      "detail": "The core reaches its greatest density, {{compression}}.",
+      "major": false
+    }
+  ],
+  "callouts": [
+    { "id": "reflect", "u0": 0.05, "u1": 0.45, "text": "It reflects neutrons that would escape back into the core." },
+    { "id": "inertia", "u0": 0.47, "u1": 0.92, "text": "Its inertia holds the core together while the reaction runs." }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "phase": "anatomy",
+  "summary": "A concentric cutaway, walked from the outside in, ending on the question of how to shape the blast.",
+  "paragraphs": [
+    {
+      "u": 0.0,
+      "text": "The Gadget was a sphere built from shells, each with one job. On the outside, {{detonators}} detonators sat in a pattern of points across the surface, ready to fire at the same moment."
+    },
+    {
+      "u": 0.3,
+      "text": "Working inward: explosive lenses, an inner explosive charge, an aluminium pusher, a natural-uranium tamper, the plutonium core ({{core_mass}}) and, at the very centre, a polonium-beryllium initiator. The drawing is a schematic, not to scale."
+    },
+    {
+      "u": 0.88,
+      "text": "The whole design depends on one problem. Every detonator starts its own spreading wave, but the core needs a single, round wave moving inward. The next scene shows how that is done."
+    }
+  ],
+  "keys": [
+    {
+      "fact": "detonators",
+      "u": 0.0
+    },
+    {
+      "fact": "core_mass",
+      "u": 0.55
+    },
+    {
+      "fact": "implosion_time",
+      "u": 0.88
+    },
+    {
+      "fact": "compression",
+      "u": 0.93
+    }
+  ],
+  "events": [
+    {
+      "id": "anatomy-open",
+      "u": 0.1,
+      "short": "Cutaway opens",
+      "detail": "The closed sphere opens to a section so the seven layers can be seen."
+    },
+    {
+      "id": "anatomy-core",
+      "u": 0.66,
+      "short": "The core",
+      "detail": "At the centre sits the plutonium core, {{core_mass}}."
+    },
+    {
+      "id": "anatomy-question",
+      "u": 0.88,
+      "short": "The question",
+      "detail": "{{detonators}} separate waves must become one round, inward-moving wave."
+    }
+  ],
+  "callouts": [
+    {
+      "id": "anat-det",
+      "u0": 0.205,
+      "u1": 0.285,
+      "text": "{{detonators}} detonators sit on the surface, wired to fire at the same instant."
+    },
+    {
+      "id": "anat-lens",
+      "u0": 0.295,
+      "u1": 0.375,
+      "text": "Each lens pairs a fast explosive with a slower insert. Together they shape the detonation wave."
+    },
+    {
+      "id": "anat-charge",
+      "u0": 0.385,
+      "u1": 0.465,
+      "text": "A shell of explosive that the merged wave drives inward as one smooth push."
+    },
+    {
+      "id": "anat-pusher",
+      "u0": 0.475,
+      "u1": 0.555,
+      "text": "A smooth aluminium shell that evens out the shock and passes it to the tamper."
+    },
+    {
+      "id": "anat-tamper",
+      "u0": 0.565,
+      "u1": 0.645,
+      "text": "Natural uranium. It reflects neutrons back and, by its inertia, holds the core together a moment longer."
+    },
+    {
+      "id": "anat-core",
+      "u0": 0.655,
+      "u1": 0.735,
+      "text": "{{core_mass}} of plutonium, about the size of an orange. Squeezing it is the whole point."
+    },
+    {
+      "id": "anat-init",
+      "u0": 0.745,
+      "u1": 0.825,
+      "text": "A polonium-beryllium source at the centre that releases a burst of neutrons when the core is crushed."
+    },
+    {
+      "id": "anat-question",
+      "u0": 0.88,
+      "u1": 1.0,
+      "text": "{{detonators}} separate explosions each send out a spreading wave. How do you turn them into one perfectly round wave moving inward?"
+    }
+  ]
+}

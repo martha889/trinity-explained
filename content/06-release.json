@@ -1,0 +1,76 @@
+{
+  "phase": "release",
+  "summary": "The core blows itself apart, the chain reaction stops, and X-rays turn the surrounding air into a glowing sphere.",
+  "paragraphs": [
+    {
+      "u": 0.0,
+      "text": "The core is now at {{core_temp}} and under enormous pressure, so it flies outward. As it expands its density drops, neutrons escape instead of splitting more atoms, and the multiplication factor falls back below 1. The chain reaction stops after only {{pu_fissioned}} has split. The rest of the plutonium is simply thrown apart."
+    },
+    {
+      "u": 0.08,
+      "text": "Most of the energy leaves as X-rays. Air soaks them up within a few metres, so the air next to the core is heated until it glows, and that glowing air heats the air beyond it. This is how the fireball begins: mostly glowing air, mixed with vaporised Gadget and tower, not burning material."
+    },
+    {
+      "u": 0.5,
+      "text": "As the sphere grows, the camera pulls back through the vaporising cab and the top of the tower. The temperature keeps falling, yet it stays far above the surface of the Sun. By one millisecond the ball is wider than the {{tower_height}} tower is tall and has reached the ground."
+    }
+  ],
+  "keys": [
+    {
+      "fact": "core_temp",
+      "u": 0.0
+    },
+    {
+      "fact": "pu_fissioned",
+      "u": 0.04
+    },
+    {
+      "fact": "yield_j",
+      "u": 0.1
+    },
+    {
+      "fact": "mass_converted",
+      "u": 0.3
+    },
+    {
+      "fact": "tower_height",
+      "u": 0.7
+    }
+  ],
+  "events": [
+    {
+      "id": "release-flash",
+      "u": 0.03,
+      "short": "Detonation flash",
+      "detail": "The first light: X-rays are absorbed by the air around the core, which starts to glow.",
+      "major": true
+    },
+    {
+      "id": "release-touchdown",
+      "u": 0.865,
+      "short": "Fireball reaches the ground",
+      "detail": "The glowing sphere, centred at the top of the {{tower_height}} tower, grows large enough to touch the desert floor.",
+      "major": false
+    }
+  ],
+  "callouts": [
+    {
+      "id": "core",
+      "u0": 0.0,
+      "u1": 0.12,
+      "text": "The core expands. Its density falls, so neutrons escape and k drops below 1."
+    },
+    {
+      "id": "xray",
+      "u0": 0.1,
+      "u1": 0.4,
+      "text": "Faint streaks: X-rays leave the core and are absorbed by the air within metres."
+    },
+    {
+      "id": "air",
+      "u0": 0.4,
+      "u1": 0.84,
+      "text": "Mostly air, heated until it glows, mixed with vaporised Gadget and tower. The cab and the top of the tower vaporise."
+    }
+  ]
+}

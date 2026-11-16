@@ -1,0 +1,66 @@
+{
+  "phase": "countdown",
+  "summary": "Pre-dawn desert, the tower and a countdown.",
+  "paragraphs": [
+    {
+      "u": 0.0,
+      "text": "Trinity, the first nuclear explosion, was set for {{date_time}} at {{place}}. The device, nicknamed the Gadget, sat in a steel cab on top of a {{tower_height}} tower."
+    },
+    {
+      "u": 0.2,
+      "text": "Observers waited in shelters {{shelter_dist}} from the tower. The base camp was {{base_camp_dist}} away. Out here the desert floor is flat for tens of kilometres, so the tower is a thin line against the mountains."
+    },
+    {
+      "u": 0.55,
+      "text": "The clock counts down from ten seconds. As it does, the view closes in from the whole test site to the cab at the top of the tower."
+    },
+    {
+      "u": 0.92,
+      "text": "In the last second the view passes through the cab wall to the Gadget itself. The next chapter opens it up, layer by layer."
+    }
+  ],
+  "keys": [
+    { "fact": "date_time", "u": 0.0 },
+    { "fact": "tower_height", "u": 0.1 },
+    { "fact": "shelter_dist", "u": 0.2 },
+    { "fact": "base_camp_dist", "u": 0.3 }
+  ],
+  "events": [
+    {
+      "id": "countdown-wide",
+      "u": 0.04,
+      "short": "The test site",
+      "detail": "The whole site in one view: tower, observer shelters at {{shelter_dist}} and base camp at {{base_camp_dist}}.",
+      "major": false
+    },
+    {
+      "id": "countdown-push",
+      "u": 0.26,
+      "short": "Push in to the tower",
+      "detail": "One steady camera move from the whole site to the top of the tower, while the clock runs down.",
+      "major": false
+    },
+    {
+      "id": "countdown-cab",
+      "u": 0.915,
+      "short": "Through the cab wall",
+      "detail": "The view passes through the wall of the shot cab to the device inside.",
+      "major": false
+    },
+    {
+      "id": "countdown-signal",
+      "u": 0.99,
+      "short": "Firing signal",
+      "detail": "The detonators fire. This instant is T = 0; the officially recorded time is {{date_time}}.",
+      "major": true
+    }
+  ],
+  "callouts": [
+    {
+      "id": "where",
+      "u0": 0.42,
+      "u1": 0.9,
+      "text": "The shot cab on top of the tower"
+    }
+  ]
+}

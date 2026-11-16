@@ -1,0 +1,84 @@
+{
+  "phase": "lenses",
+  "summary": "One lens shows how two explosive speeds reshape a wave; then all of them merge into one inward wave.",
+  "paragraphs": [
+    {
+      "u": 0.0,
+      "text": "All {{detonators}} detonators fire together, and each sets off an expanding wave inside its own explosive lens. Left alone, these waves would arrive as a patchwork of bumps, not as one clean squeeze."
+    },
+    {
+      "u": 0.18,
+      "text": "Each lens is built from two explosives that burn at different speeds. A slower insert sits in the path of the wave and holds back its middle. The front flattens, then bends the other way, much as a glass lens bends light."
+    },
+    {
+      "u": 0.76,
+      "text": "Where the lenses meet, the {{detonators}} shaped waves join into a single sphere that moves inward. It reaches the pusher after {{implosion_time}}. The lens shapes here are illustrative, not measured."
+    }
+  ],
+  "keys": [
+    {
+      "fact": "detonators",
+      "u": 0.0
+    },
+    {
+      "fact": "implosion_time",
+      "u": 0.7
+    },
+    {
+      "fact": "compression",
+      "u": 0.9
+    }
+  ],
+  "events": [
+    {
+      "id": "lenses-fire",
+      "u": 0.01,
+      "short": "All detonators fire",
+      "detail": "All {{detonators}} detonators fire together."
+    },
+    {
+      "id": "lenses-flat",
+      "u": 0.3,
+      "short": "Front flattens",
+      "detail": "The slow insert holds back the middle of the wave."
+    },
+    {
+      "id": "lenses-merge",
+      "u": 0.74,
+      "short": "Fronts merge",
+      "detail": "{{detonators}} shaped fronts join into one converging sphere."
+    }
+  ],
+  "callouts": [
+    {
+      "id": "lens-problem",
+      "u0": 0.0,
+      "u1": 0.09,
+      "text": "{{detonators}} detonators fire together. Each one starts its own wave, spreading outward. The core needs one wave moving inward."
+    },
+    {
+      "id": "lens-bulge",
+      "u0": 0.13,
+      "u1": 0.195,
+      "text": "In the fast explosive, the wave spreads from the detonator as a bulging arc."
+    },
+    {
+      "id": "lens-flat",
+      "u0": 0.2,
+      "u1": 0.4,
+      "text": "The slow insert holds the middle of the wave back, so the front flattens."
+    },
+    {
+      "id": "lens-concave",
+      "u0": 0.405,
+      "u1": 0.6,
+      "text": "Past the insert the front curves the other way, bowed toward the centre of the sphere."
+    },
+    {
+      "id": "lens-merge",
+      "u0": 0.72,
+      "u1": 1.0,
+      "text": "The {{detonators}} fronts merge into one smooth sphere, shrinking inward."
+    }
+  ]
+}

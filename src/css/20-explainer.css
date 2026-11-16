@@ -1,0 +1,33 @@
+/* Explainer panel: paragraphs reveal as u advances; key-number rows carry M/C/I chips. */
+.explainer { min-height: 0; }
+.ex-body { display: flex; flex-direction: column; min-height: 0; flex: 1; }
+.ex-scroll { position: relative; flex: 1 1 auto; min-height: 0; overflow-y: auto; padding: 10px 14px 4px; scrollbar-width: thin; scrollbar-color: var(--line) transparent; overscroll-behavior: contain; }
+.ex-scroll.scrolled { -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 12px); mask-image: linear-gradient(to bottom, transparent 0, #000 12px); }
+.ex-body p { margin: 0 0 9px; font-size: 14px; line-height: 1.5; color: var(--fg); text-wrap: pretty; }
+.ex-body p.rv { display: none; }
+.ex-body p.rv.on { display: block; }
+.ex-body p.rv.on.anim { animation: pIn 420ms var(--ease) both; }
+.ex-body p.rv.old { color: #8a95a8; }
+.ex-body p.rv.old.anim { animation: none; }
+.ex-body p.rv.old .num { color: #c4b8a4; }
+@keyframes pIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.ex-foot { flex: none; padding: 0 14px 9px; border-top: 1px solid var(--line); background: var(--panel); }
+.num { font-weight: 600; color: var(--hot); }
+.num::after, .chip { }
+.num::after { content: attr(data-tag); display: inline-block; margin-left: 3px; vertical-align: 0.45em; font-family: var(--font-display); font-weight: 700; font-size: 0.8em; letter-spacing: 0.04em; color: var(--tagc, var(--muted)); }
+.num[data-tag="M"], .chip[data-tag="M"] { --tagc: var(--neutron); }
+.num[data-tag="C"], .chip[data-tag="C"] { --tagc: var(--fire); }
+.num[data-tag="I"], .chip[data-tag="I"] { --tagc: var(--pu); }
+.keys { display: grid; gap: 0; margin-top: 2px; }
+.krow { display: none; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding: 3px 0; border-bottom: 1px solid rgba(37,48,68,0.6); }
+.krow.on { display: grid; }
+.krow.on.anim { animation: pIn 420ms var(--ease) both; }
+.krow .k { color: var(--muted); font-size: 12.5px; }
+.krow .v { font-family: var(--font-mono); font-size: 12.5px; color: var(--hot); text-align: right; font-variant-numeric: tabular-nums; }
+.chip { display: inline-block; min-width: 15px; text-align: center; padding: 0 3px; margin: 0 2px 0 6px; border: 1px solid var(--tagc, var(--line)); color: var(--tagc, var(--muted)); border-radius: 3px; font-family: var(--font-display); font-weight: 700; font-size: 11px; line-height: 14px; }
+.legend { margin: 6px 0 0 !important; font-size: 11.5px !important; color: var(--muted) !important; }
+.krow .chip { margin-left: 8px; }
+a.chip { text-decoration: none; cursor: pointer; }
+a.chip:hover { background: rgba(255,255,255,0.08); }
+.krow .v { display: inline-flex; align-items: baseline; justify-content: flex-end; gap: 0; flex-wrap: nowrap; }
+.krow .v .val { min-width: 0; }

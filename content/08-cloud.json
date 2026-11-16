@@ -1,0 +1,41 @@
+{
+  "phase": "cloud",
+  "summary": "A bubble of hot gas rises, rolls into a ring and stops where it matches the air around it.",
+  "paragraphs": [
+    {
+      "u": 0.0,
+      "text": "The fireball is a bubble of very hot, thin gas. Hot gas is lighter than the cooler air around it, so it rises, the way an air bubble rises in water. At first it glows white-yellow. As it climbs it mixes with cold air and fades through orange and dull red to the grey of ordinary dust."
+    },
+    {
+      "u": 0.3,
+      "text": "The rising bubble pulls air up through its middle and rolls it outward and down around the edge: a spinning ring, the cap of the mushroom. Behind it, a column of dust and debris from the ground is drawn upward, the stem. The shape drawn here is a stylised model, not a reconstruction."
+    },
+    {
+      "u": 0.5,
+      "text": "The blast wave travels along the ground faster than the cloud climbs. It reached the observer shelters {{blast_shelter}} and the base camp {{blast_base_camp}}. At base camp Enrico Fermi dropped scraps of paper and watched how far the passing blast carried them. From that he estimated {{yield_fermi}}, well below the figures worked out later."
+    },
+    {
+      "u": 0.8,
+      "text": "The bubble stops rising once it has cooled to the temperature of the air around it. The cloud reached {{cloud_top}} in {{cloud_rise_time}}, then spread out and began to drift with the wind."
+    }
+  ],
+  "keys": [
+    { "fact": "blast_shelter", "u": 0.45 },
+    { "fact": "blast_base_camp", "u": 0.55 },
+    { "fact": "yield_fermi", "u": 0.62 },
+    { "fact": "cloud_rise_time", "u": 0.8 },
+    { "fact": "cloud_top", "u": 0.88 }
+  ],
+  "events": [
+    { "id": "cloud-rise", "u": 0.06, "short": "The bubble lifts off", "detail": "Hot, light gas begins to rise and roll into a ring.", "major": false },
+    { "id": "cloud-shelter", "u": 0.449, "short": "Blast reaches the shelters", "detail": "The blast wave reaches the observer shelters: {{blast_shelter}}.", "major": false },
+    { "id": "cloud-camp", "u": 0.551, "short": "Blast reaches base camp", "detail": "The blast wave reaches base camp: {{blast_base_camp}}. Fermi drops his scraps of paper.", "major": true },
+    { "id": "cloud-ceiling", "u": 0.878, "short": "The cloud stops rising", "detail": "The cloud has cooled to the temperature of the surrounding air, about {{cloud_top}}.", "major": false }
+  ],
+  "callouts": [
+    { "id": "bubble", "u0": 0.04, "u1": 0.3, "text": "Hot gas is light, so the ball rises like a bubble" },
+    { "id": "ring", "u0": 0.32, "u1": 0.44, "text": "It rolls into a ring: up the middle, out across the top, down the sides" },
+    { "id": "stem", "u0": 0.6, "u1": 0.78, "text": "A stem of dust is drawn up behind it" },
+    { "id": "ceiling", "u0": 0.82, "u1": 0.98, "text": "It stops when it has cooled to the temperature of the air around it" }
+  ]
+}

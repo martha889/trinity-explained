@@ -1,0 +1,59 @@
+{
+  "phase": "chain",
+  "summary": "Eighty generations of doubling release the energy, almost all of it in the last few.",
+  "paragraphs": [
+    {
+      "u": 0.0,
+      "text": "At peak squeeze the crushed initiator releases a burst of neutrons. One strikes a plutonium nucleus, which wobbles, necks and splits into two fragments. Each fission releases {{mev_per_fission}} and frees {{neutrons_per_fission}} new neutrons."
+    },
+    {
+      "u": 0.15,
+      "text": "Each new neutron can split another nucleus, so the number of fissions roughly doubles with every generation. A generation lasts {{generation_time}}. The tracks drawn here are only the first few generations. After that there are too many, so they are shown as a glowing density."
+    },
+    {
+      "u": 0.45,
+      "text": "The doubling runs for {{generations}} generations. For most of that time the energy released is still tiny, so almost nothing seems to happen. Clean doubling is a simplification, drawn here for illustration."
+    },
+    {
+      "u": 0.88,
+      "text": "Doubling is sudden at the end. The last few generations release nearly all of the energy, and the core heats to {{core_temp}}. The total is {{yield_j}}."
+    }
+  ],
+  "keys": [
+    { "fact": "mev_per_fission", "u": 0.0 },
+    { "fact": "neutrons_per_fission", "u": 0.05 },
+    { "fact": "generation_time", "u": 0.2 },
+    { "fact": "generations", "u": 0.45 },
+    { "fact": "core_temp", "u": 0.9 },
+    { "fact": "yield_j", "u": 0.95 }
+  ],
+  "events": [
+    {
+      "id": "chain-initiator",
+      "u": 0.02,
+      "short": "Initiator burst",
+      "detail": "The crushed initiator releases a burst of neutrons at maximum compression, and the first fissions begin.",
+      "major": true
+    },
+    {
+      "id": "chain-literal",
+      "u": 0.125,
+      "short": "Too many to draw",
+      "detail": "After about ten generations there are too many neutron paths to draw one by one.",
+      "major": false
+    },
+    {
+      "id": "chain-last",
+      "u": 0.9125,
+      "short": "The last doublings",
+      "detail": "The final few generations release nearly all of the energy.",
+      "major": true
+    }
+  ],
+  "callouts": [
+    { "id": "initiator", "u0": 0.0, "u1": 0.12, "text": "A burst of neutrons from the initiator starts the chain." },
+    { "id": "literal", "u0": 0.13, "u1": 0.3, "text": "Too many paths to draw one by one. From here the neutrons are shown as a glowing density." },
+    { "id": "quiet", "u0": 0.31, "u1": 0.86, "text": "For most of this microsecond almost nothing seems to happen." },
+    { "id": "last", "u0": 0.88, "u1": 1.0, "text": "The last few doublings release almost all of the energy." }
+  ]
+}

@@ -1,0 +1,36 @@
+@media (max-width: 960px) {
+  .stage { grid-template-columns: minmax(0, 1fr); }
+  .traj { height: 58vh; min-height: 360px; }
+  .right { height: auto; min-height: 0; grid-template-rows: auto auto; }
+  .ex-scroll { overflow: visible; flex: none; }
+  .ex-scroll.scrolled { -webkit-mask-image: none; mask-image: none; }
+}
+@media (max-width: 700px) {
+  :root { --bar-h: 132px; }
+  .tclock { font-size: 24px; }
+  .ticks span { display: none; }
+  .ptime { margin-left: 0; }
+  .jump { flex: 1 1 130px; max-width: none; }
+  #theatre { display: none; }
+  .event-strip { height: 84px; flex-wrap: wrap; row-gap: 2px; }
+  .event-strip span:last-child { flex: 1 1 100%; }
+  .tip span { max-width: 60vw; }
+}
+@media (max-width: 480px) {
+  .app, .transport { padding-left: max(12px, env(safe-area-inset-left, 0px)); padding-right: max(12px, env(safe-area-inset-right, 0px)); }
+  .brand h1 { font-size: 22px; }
+  .brand span, .wall { font-size: 11px; }
+  .tclock { font-size: 22px; min-width: 0; }
+  .top { gap: 6px 12px; }
+  .controls { gap: 6px 8px; }
+  .btn.primary { min-width: 72px; }
+  .speed button { padding: 0 7px; }
+}
+/* Theatre mode (F): the animation only. */
+.app.theatre .right { display: none; }
+.app.theatre .stage { grid-template-columns: minmax(0, 1fr); }
+.app.theatre .traj { height: max(380px, calc(100vh - var(--bar-h) - 130px)); height: max(380px, calc(100dvh - var(--bar-h) - 130px)); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+
+}

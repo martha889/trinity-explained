@@ -1,0 +1,66 @@
+{
+  "phase": "aftermath",
+  "summary": "A shallow crater, green glass, a ledger of the numbers, and what followed.",
+  "paragraphs": [
+    {
+      "u": 0.0,
+      "text": "By dawn the tower was gone, vaporised, with only its footings left. Beneath it was a shallow crater, {{crater}}. The desert sand had melted and fallen as a thin layer of green glass, now called trinitite, found out to {{trinitite_extent}}."
+    },
+    {
+      "u": 0.35,
+      "text": "The ledger. The explosion released the energy of {{yield_kt}}, or {{yield_j}}. Only {{pu_fissioned}} fissioned. The mass that turned into that energy was {{mass_converted}}."
+    },
+    {
+      "u": 0.53,
+      "text": "No single yield figure is final. Fermi's paper scraps gave {{yield_fermi}}. Radiochemistry gave {{yield_1945}}. A 2021 re-analysis of trinitite gave {{yield_2021}}."
+    },
+    {
+      "u": 0.8,
+      "text": "Fallout drifted downwind: {{fallout_note}}. Twenty-four days after the test, on {{nagasaki_date}}, the same design was dropped on Nagasaki."
+    }
+  ],
+  "keys": [
+    { "fact": "crater", "u": 0.0 },
+    { "fact": "trinitite_extent", "u": 0.15 },
+    { "fact": "yield_kt", "u": 0.35 },
+    { "fact": "pu_fissioned", "u": 0.5 },
+    { "fact": "mass_converted", "u": 0.55 },
+    { "fact": "yield_2021", "u": 0.62 }
+  ],
+  "events": [
+    {
+      "id": "aftermath-ground",
+      "u": 0.03,
+      "short": "Crater and glass",
+      "detail": "Ground zero at dawn: a shallow crater, {{trinitite_extent}} of green glass, and the footings of the tower.",
+      "major": false
+    },
+    {
+      "id": "aftermath-ledger",
+      "u": 0.35,
+      "short": "The ledger",
+      "detail": "The picture dims and the numbers are set out one row at a time.",
+      "major": false
+    },
+    {
+      "id": "aftermath-estimates",
+      "u": 0.53,
+      "short": "Four yield estimates",
+      "detail": "Fermi's scraps of paper, the 1945 and 1963 figures, and the 2021 re-analysis on one axis.",
+      "major": false
+    },
+    {
+      "id": "aftermath-after",
+      "u": 0.8,
+      "short": "What followed",
+      "detail": "Fallout over ranches and villages, and Nagasaki on {{nagasaki_date}}.",
+      "major": true
+    }
+  ],
+  "callouts": [
+    { "id": "cloud", "u0": 0.04, "u1": 0.28, "text": "Remnant of the cloud, far above this view, drifting away" },
+    { "id": "glass", "u0": 0.07, "u1": 0.28, "text": "Green glass (trinitite) on the surface, out to {{trinitite_extent}}" },
+    { "id": "crater", "u0": 0.1, "u1": 0.28, "text": "Shallow crater" },
+    { "id": "footings", "u0": 0.13, "u1": 0.28, "text": "Footings where the tower stood" }
+  ]
+}
