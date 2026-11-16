@@ -26,7 +26,7 @@ import trinity_sim  # noqa: E402
 
 TITLE = "Trinity, explained"
 DESC = ("An animated, scientific explainer of the Trinity nuclear test, 16 July 1945: how an implosion "
-        "device works, from the firing signal to the cloud, on a clock from nanoseconds to minutes.")
+        "device works, from the detonation to the cloud, on a clock from nanoseconds to minutes.")
 
 # id, title, subtitle, play seconds, t0, t1, map, view width text
 PHASES = [
@@ -195,6 +195,40 @@ def font_css() -> str:
                    f'src:url(data:font/woff2;base64,{b64}) format("woff2")}}')
     return "\n".join(out) + "\n"
 
+SITE_URL = "https://martha889.github.io/trinity-explained/"
+KEYWORDS = ("Trinity test, nuclear weapons history, Manhattan Project, implosion, chain reaction, "
+            "blast wave, Taylor-Sedov, Los Alamos, physics animation, science explainer, 1945")
+FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E"
+           "%3Crect width='32' height='32' rx='6' fill='%230b0e14'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23ffa23a'/%3E"
+           "%3Ccircle cx='16' cy='16' r='4.5' fill='%23fff4dc'/%3E%3C/svg%3E")
+
+
+def head_meta() -> str:
+    """Search, social-card and structured-data tags for the page head."""
+    t, d = html.escape(TITLE, quote=True), html.escape(DESC, quote=True)
+    img = SITE_URL + "docs/screenshot.png"
+    ld = json.dumps({
+        "@context": "https://schema.org", "@type": "LearningResource", "name": TITLE, "description": DESC,
+        "url": SITE_URL, "image": img, "inLanguage": "en", "learningResourceType": "Interactive animation",
+        "educationalLevel": "General audience", "isAccessibleForFree": True,
+        "about": ["Trinity nuclear test", "Nuclear fission", "Implosion-type nuclear weapon", "Manhattan Project"],
+        "keywords": KEYWORDS, "datePublished": "2026-11-16",
+    }, ensure_ascii=False).replace("</", "<\\/")
+    return (f"<link rel=\"canonical\" href=\"{SITE_URL}\">\n"
+            f"<link rel=\"icon\" href=\"{FAVICON}\">\n"
+            f"<meta name=\"keywords\" content=\"{html.escape(KEYWORDS, quote=True)}\">\n"
+            "<meta name=\"robots\" content=\"index, follow, max-image-preview:large\">\n"
+            f"<meta property=\"og:type\" content=\"website\">\n<meta property=\"og:site_name\" content=\"{t}\">\n"
+            f"<meta property=\"og:title\" content=\"{t}: the first nuclear test, animated\">\n"
+            f"<meta property=\"og:description\" content=\"{d}\">\n<meta property=\"og:url\" content=\"{SITE_URL}\">\n"
+            f"<meta property=\"og:image\" content=\"{img}\">\n<meta property=\"og:image:width\" content=\"1440\">\n"
+            "<meta property=\"og:image:height\" content=\"900\">\n"
+            "<meta property=\"og:image:alt\" content=\"The Trinity fireball a few milliseconds after detonation, with a radius-versus-time plot.\">\n"
+            "<meta name=\"twitter:card\" content=\"summary_large_image\">\n"
+            f"<meta name=\"twitter:title\" content=\"{t}\">\n<meta name=\"twitter:description\" content=\"{d}\">\n"
+            f"<meta name=\"twitter:image\" content=\"{img}\">\n"
+            f"<script type=\"application/ld+json\">{ld}</script>\n")
+
 
 def assemble(data: dict) -> str:
     src = ROOT / "src"
@@ -223,6 +257,7 @@ def assemble(data: dict) -> str:
             f"<title>{html.escape(TITLE)}</title>\n"
             f"<meta name=\"description\" content=\"{html.escape(DESC, quote=True)}\">\n"
             "<meta name=\"theme-color\" content=\"#0b0e14\">\n"
+            + head_meta() +
             "<style>body{margin:0}[hidden]{display:none!important}</style>\n"
             "</head>\n<body>\n" + frag + "\n</body>\n</html>\n")
 

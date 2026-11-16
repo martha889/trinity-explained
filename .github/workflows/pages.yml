@@ -27,6 +27,8 @@ jobs:
       - name: Add static files
         run: |
           touch _site/.nojekyll
+          printf 'User-agent: *\nAllow: /\nSitemap: https://martha889.github.io/trinity-explained/sitemap.xml\n' > _site/robots.txt
+          printf '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://martha889.github.io/trinity-explained/</loc></url></urlset>\n' > _site/sitemap.xml
           if [ -d docs ]; then cp -r docs _site/docs; fi
       - uses: actions/upload-pages-artifact@v3
         with:

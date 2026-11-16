@@ -107,7 +107,7 @@
   var UNITS = [[1e-9, "ns", "nanosecond", "nanoseconds"], [1e-6, "µs", "microsecond", "microseconds"],
     [1e-3, "ms", "millisecond", "milliseconds"], [1, "s", "second", "seconds"], [60, "min", "minute", "minutes"]];
   function sig4(v) { return v >= 1000 ? String(Math.round(v)) : v >= 100 ? v.toFixed(1) : v >= 10 ? v.toFixed(2) : v.toFixed(3); }
-  // Clock text for physical time t (seconds from the firing signal), unit chosen automatically:
+  // Clock text for physical time t (seconds from the instant the detonators fire), unit chosen automatically:
   // "T − 4.200 s", "T + 60.31 µs", "T + 16.00 ms", "T + 3 min 10 s". t = 0 gives "T = 0".
   U.fmtClock = function (t) {
     var a = Math.abs(t);

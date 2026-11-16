@@ -1,7 +1,7 @@
 
   // ============================================================================
   // 10-sim: Sim, interpolators over the build-time physics tables (sim/trinity_sim.py).
-  // Every function is a pure function of physical time t (seconds from the firing signal).
+  // Every function is a pure function of physical time t (seconds from the instant the detonators fire).
   // ============================================================================
   var Sim = (function () {
     var T = D.sim.t, SER = D.sim.series, P = D.sim.params, N = T.length;

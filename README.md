@@ -1,6 +1,8 @@
 # Trinity, explained
 
-An animated, scientific explainer of the Trinity nuclear test (16 July 1945): how an implosion device works, from the firing signal to the
+**[Watch it live](https://martha889.github.io/trinity-explained/)** · [Source on GitHub](https://github.com/martha889/trinity-explained)
+
+An animated, scientific explainer of the Trinity nuclear test (16 July 1945): how an implosion device works, from the detonation to the
 cloud and what was left, on a clock that runs from nanoseconds to minutes. One offline HTML page: Canvas 2D, vanilla JavaScript, no dependencies,
 assembled by a Python build script.
 
